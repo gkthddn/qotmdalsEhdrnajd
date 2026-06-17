@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 스포츠 트레이너 & 기록일지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏋️‍♂️ AI 스포츠 트레이너</h1>
 
+        <div id="auth-section" class="section">
+            <h2>로그인 / 회원가입</h2>
+            <input type="email" id="email" placeholder="이메일 입력">
+            <input type="password" id="password" placeholder="비밀번호 입력">
+            <div class="btn-group">
+                <button id="login-btn">로그인</button>
+                <button id="signup-btn">회원가입</button>
+            </div>
+            <p id="auth-msg"></p>
+        </div>
+
+        <div id="main-section" class="section" style="display: none;">
+            <div class="user-info">
+                <span id="user-email"></span>님 환영합니다!
+                <button id="logout-btn">로그아웃</button>
+            </div>
+
+            <div class="card ai-card">
+                <h2>🤖 AI 트레이너에게 물어보세요</h2>
+                <div class="chat-box" id="chat-box">
+                    <p class="ai-msg">안녕하세요! 오늘 어떤 운동을 도와드릴까요?</p>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="ai-input" placeholder="예: 오늘 가슴 운동 루틴 짜줘">
+                    <button id="ask-btn">질문하기</button>
+                </div>
+                <button id="tts-btn" class="tts-btn">🔊 마지막 AI 답변 듣기</button>
+            </div>
+
+            <div class="card log-card">
+                <h2>📝 나의 운동 일지</h2>
+                <div class="input-group">
+                    <input type="date" id="log-date">
+                    <input type="text" id="log-text" placeholder="예: 벤치프레스 5세트 완료">
+                    <button id="save-log-btn">기록 저장</button>
+                </div>
+                <ul id="log-list" class="log-list">
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
